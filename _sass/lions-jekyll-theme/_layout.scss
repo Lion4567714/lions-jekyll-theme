@@ -339,3 +339,19 @@
       width: calc(50% - (#{$spacing-unit} / 2));
     }
   }
+
+
+
+/**
+  * My stuff
+  */
+.flex-container {
+  resize: horizontal;
+  overflow: hidden;
+  display: flex
+}
+
+.sidebar {
+  padding: $spacing-unit 0;
+  flex: 1 0 auto;
+}
