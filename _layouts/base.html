@@ -7,16 +7,14 @@
         
         {%- include header.html -%}
 
-        <div class="flex-container">
-            <div class="wrapper">
+        <main class="flex-container wrapper page-content">
+            <div class="wrapper" style="width: auto">
                 {%- include sidebar.html -%}
             </div>
-            <main class="page-content" aria-label="Content">
-                <div class="wrapper">
-                    {{ content }}
-                </div>
-            </main>
-        </div>
+            <div class="wrapper" style="width: auto; white-space: nowrap">
+                {{ content }}
+            </div>
+        </main>
 
         {%- include footer.html -%}
 

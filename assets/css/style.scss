@@ -3,5 +3,5 @@
 ---
 
 @import
-  "lions-jekyll-theme/skins/{{ site.lions-jekyll-theme.skin | default: 'classic' }}",
+  "lions-jekyll-theme/skins/{{ site.lions-jekyll-theme.skin | default: 'dark' }}",
   "lions-jekyll-theme/initialize";
