@@ -1,9 +1,9 @@
-<div style="max-width: 30vw; width: 200px">
+<div class="sidebar">
     {%- if site.profile_picture -%}
         <img class="profile-picture" src="{{ site.profile_picture }}" />
     {%- endif -%}
 
-    <div style="height: 15px"></div>
+    <div style="height: 1rem"></div>
 
     {%- if site.author.name -%}
         <div class="profile-name">{{ site.author.name }}</div>
@@ -13,7 +13,7 @@
         <div class="profile-username">{{ site.author.username }}</div>
     {%- endif -%}
 
-    <div style="height: 15px"></div>
+    <div style="height: 1rem"></div>
 
     <table class="profile-table">
         {%- for social in site.socials -%}

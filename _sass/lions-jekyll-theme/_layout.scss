@@ -202,7 +202,7 @@
   */
 .page-content {
   padding: $spacing-unit 0;
-  flex: 1 0 auto;
+  // flex: 1 0 auto;
 }
 
 .page-heading {
@@ -350,8 +350,11 @@
 }
 
 .sidebar {
-  padding: $spacing-unit 0;
-  flex: 1 0 auto;
+  max-width: 14rem;
+  width: auto;
+  font-family: JetBrains;
+  white-space: nowrap;
+  margin-right: 2rem;
 }
 
 .profile-picture {
