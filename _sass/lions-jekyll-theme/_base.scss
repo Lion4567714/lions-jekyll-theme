@@ -272,3 +272,21 @@ table {
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }
+
+@font-face {
+  font-family: JetBrains;
+  src: url("../assets/fonts/JetBrainsMonoNerdFontPropo-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: JetBrains;
+  src: url("../assets/fonts/JetBrainsMonoNerdFontPropo-SemiBold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: JetBrains;
+  src: url("../assets/fonts/JetBrainsMonoNerdFontPropo-Thin.ttf");
+  font-weight: lighter;
+}
