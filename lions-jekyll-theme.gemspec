@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "lions-jekyll-theme"
-  spec.version       = "0.1.2"
+  spec.version       = "0.2.0"
   spec.authors       = ["Anders Gilliland"]
   spec.email         = ["luboost3@gmail.com"]
 
-  spec.summary       = "A custom theme built specfically for my website https://ablion.dev"
+  spec.summary       = "A custom theme built specfically for my website https://ablion.dev, now with support for mobile devices."
   spec.homepage      = "https://github.com/Lion4567714/lions-jekyll-theme"
   spec.license       = "MIT"
 
