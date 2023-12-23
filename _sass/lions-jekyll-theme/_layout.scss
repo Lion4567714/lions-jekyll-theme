@@ -32,6 +32,7 @@
 
 .site-nav {
   position: absolute;
+  z-index: 2;
   top: 9px;
   right: $spacing-unit * .5;
   background-color: $background-color;
@@ -151,14 +152,6 @@
     display: none;
   }
 
-  input ~ .sidebar {
-    display: none;
-  }
-
-  input:checked ~ .sidebar {
-    display: block;
-  }
-
   .sidebar-toggle-box {
     position: absolute;
     top: 85px;
@@ -173,7 +166,7 @@
     transition: ease-in-out 0.3s;
 
     &:hover {
-      transform: translateX(1rem);
+      transform: translateX(0.5rem);
     }
   }
 
@@ -187,6 +180,35 @@
     fill: $border-color-03;
     transform: scale(1.5, 1.5);
     margin-left: 0.2rem;
+  }
+
+  input {
+    ~ .sidebar {
+      left: -300px;
+    }
+
+    &:checked {
+      ~ .sidebar {
+        left: 0px;
+      }
+
+      + label > .sidebar-toggle-box {
+        width: 20rem;
+        justify-content: end;
+
+        &:hover {
+          transform: translateX(-0.5rem);
+        }
+
+        > .sidebar-toggle-picture {
+          transform: translateX(0.9rem);
+        }
+
+        > .sidebar-toggle-icon {
+          transform: rotate(0.5turn) translatex(2.7rem) scale(1.5, 1.5);
+        }
+      }
+    }
   }
 
   @media all and (width >= $on-medium) {
@@ -214,16 +236,10 @@
   height: 3rem;
   width: 30vw;
   min-width: 200px;
-  display: block;
+  display: flex;
+  justify-content: space-evenly;
   margin-left: auto;
   margin-right: auto;
-}
-
-.footer-social-table {
-  vertical-align: middle;
-  border: none;
-  width: 100%;
-  height: 100%;
 }
 
 .footer-social-icon {
@@ -247,8 +263,8 @@
   * Page content
   */
 .page-content {
-  padding: $spacing-unit 0;
-  // flex: 1 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .page-heading {
@@ -401,6 +417,7 @@
   font-family: JetBrains;
   white-space: nowrap;
   margin-right: 2rem;
+  transition: 0.3s linear;
 
   @media all and (width < $on-medium) {
     position: absolute;
