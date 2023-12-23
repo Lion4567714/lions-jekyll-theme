@@ -32,6 +32,8 @@ html {
     min-height: 100vh;
     flex-direction: column;
     overflow-wrap: break-word;
+
+    // transition: ease-in-out 0.3s;
   }
   
   
@@ -111,9 +113,10 @@ html {
   /**
    * Links
    */
-  a {
-    color: $link-base-color;
+  a:not(.header-link) {
     text-decoration: none;
+    color: $link-base-color;
+    transition: 0.5s;
   
     &:visited {
       color: $link-visited-color;
@@ -133,6 +136,7 @@ html {
     }
   }
   
+
   
   /**
    * Blockquotes
@@ -250,14 +254,19 @@ html {
 * Tables
 */
 table {
-  margin-bottom: $spacing-unit;
   text-align: $table-text-align;
   color: $table-text-color;
   border: none;
+  border-collapse: collapse;
+
+  tbody {
+    width: 100%;
+    height: 100%;
+  }
   tr {
   }
   th, td {
-    padding: ($spacing-unit * .05) ($spacing-unit * .05);
+    // padding: ($spacing-unit * .05) ($spacing-unit * .05);
   }
   th {
     background-color: $table-header-bg-color;
