@@ -1,8 +1,25 @@
 # lions-jekyll-theme
 
-Purely just a theme for my website [ablion.dev](https://www.ablion.dev/). Based upon the [minima](https://github.com/jekyll/minima) theme with some modifications. Feel free to use yourself if you're so inclined.
+This is a Jekyll theme build for [my website](https://www.ablion.dev/). It is based upon the [minima](https://github.com/jekyll/minima) Jekyll theme with some major modifications.
+
+This project is still in development, but is functional enough for my website. If anyone is interested in this project, see the [Contributing](#contributing) section.
+
+## Table of Contents
+
+- [Installation](#installation)
+  - [Gemfile](#gemfile)
+  - [Remote Theme](#remote-theme)
+  - [Install Yourself](#install-yourself)
+- [Usage](#usage)
+  - [Config Information](#config-information)
+  - [Layouts](#layouts)
+- [Contributing](#contributing)
+- [Development](#development)
+- [License](#license)
 
 ## Installation
+
+### Gemfile
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -20,26 +37,90 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+### Remote Theme
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "jekyll-remote-theme"
+```
+
+Then add this to your Jekyll site's `_config.yml`:
+
+```yaml
+remote_theme: Lion4567714/lions-jekyll-theme
+```
+
+### Install Yourself
 
     $ gem install lions-jekyll-theme
 
 ## Usage
 
-TODO: Will get there soon, still developing... See _config.yml in [my website's repo](https://github.com/Lion4567714/Lion4567714.github.io) for most of it.
+### Config Information
+Much of the basic website information is stored in your `_config.yml` file. The following fields are used by this theme:
+
+```yaml
+author:
+    profile_picture: "path/to/your/pfp"
+    name: your name
+    username: your username
+
+socials:
+    - { platform: email/github/linkedin, 
+        preview: "preview text", 
+        link: "hyperlink" }
+    - ...
+
+title: site title
+email: your email
+desciption: site description
+
+header_pages:
+    - .md files to show on the header 
+    - (e.g. index.md, about_me.md)
+```
+
+### Layouts
+Preset layouts change how your pages behave. You can change the layout of a page in the front matter of the page like so:
+
+```yaml
+---
+layout: home
+title: Home
+hyperlink: /
+---
+```
+
+#### Base 
+Basic head-header-body-footer layout
+
+#### Home
+Home page, includes sidebar with profile picture and contact information and a list of posts. 
+
+#### Post
+Standard post format, mostly unchanged from [minima](https://github.com/jekyll/minima) base.
+
+#### Page
+Mostly unused. For any non-post non-homepage pages.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/Lion4567714/lions-jekyll-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+Bug reports and pull requests are welcome on [Github](https://github.com/Lion4567714/lions-jekyll-theme)! This project was entirely for [my own website](https://www.ablion.dev/), but if anyone is interested in this project becoming more "official" I am open to the idea.
 
 ## Development
 
-To set up your environment to develop this theme, run `bundle install`.
+This project is intended strictly as a Jekyll theme for usage in tandem with a Jekyll website, but it may be adapted into its own website really easily!
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+Set up your environment with:
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `lions-jekyll-theme.gemspec` accordingly.
+    $ bundle install
+
+Then run the website with:
+
+    $ bundle exec jekyll serve
+
+You should then be able to view the website at `http://localhost:4000`. 
 
 ## License
 
